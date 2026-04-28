@@ -1,4 +1,5 @@
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp, Youtube } from 'lucide-react';
+import { PiPinterestLogo } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import ScrollReveal from './animations/ScrollReveal';
@@ -7,6 +8,15 @@ export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const socialLinks = [
+    { Icon: Facebook, color: '#1877F2', url: 'https://www.facebook.com/globalengineersaligarh' },
+    { Icon: Twitter, color: '#1DA1F2', url: 'https://x.com/Globalengi82622' },
+    { Icon: Linkedin, color: '#0A66C2', url: 'https://www.linkedin.com/in/globalengineersaligarh/' },
+    { Icon: Instagram, color: '#E4405F', url: 'https://www.instagram.com/globalengineersaligarh/' },
+    { Icon: PiPinterestLogo, color: '#BD081C', url: 'https://in.pinterest.com/Globalengineersaligarh/' },
+    { Icon: Youtube, color: '#FF0000', url: 'https://www.youtube.com/@Globalengineersaligarh' }
+  ];
 
   return (
     <footer className="bg-neutral-dark text-white pt-24 pb-12 overflow-hidden">
@@ -20,16 +30,13 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed text-lg">
               Govt. Approved Electrical Licensed Contractor specializing in end-to-end electrical solutions across India since 2020.
             </p>
-            <div className="flex items-center space-x-4">
-              {[
-                { Icon: Facebook, color: '#1877F2' },
-                { Icon: Twitter, color: '#1DA1F2' },
-                { Icon: Linkedin, color: '#0A66C2' },
-                { Icon: Instagram, color: '#E4405F' }
-              ].map(({ Icon, color }, i) => (
+            <div className="flex flex-wrap items-center gap-4">
+              {socialLinks.map(({ Icon, color, url }, i) => (
                 <motion.a 
                   key={i} 
-                  href="#" 
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -8, backgroundColor: color, scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-colors border border-white/10"

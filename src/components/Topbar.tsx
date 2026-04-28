@@ -1,4 +1,5 @@
-import { Phone, Mail, Award, ShieldCheck, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, Award, ShieldCheck, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { PiPinterestLogo } from "react-icons/pi";
 
 export default function Topbar() {
   return (
@@ -30,10 +31,12 @@ export default function Topbar() {
             </div>
           </div>
           <div className="flex items-center space-x-3 lg:space-x-4">
-            <a href="#" className="hover:text-accent-yellow transition-colors"><Facebook size={14} /></a>
-            <a href="#" className="hover:text-accent-yellow transition-colors"><Twitter size={14} /></a>
-            <a href="#" className="hover:text-accent-yellow transition-colors"><Linkedin size={14} /></a>
-            <a href="#" className="hover:text-accent-yellow transition-colors"><Instagram size={14} /></a>
+            <a href="https://www.facebook.com/globalengineersaligarh" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><Facebook size={14} /></a>
+            <a href="https://x.com/Globalengi82622" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><Twitter size={14} /></a>
+            <a href="https://www.linkedin.com/in/globalengineersaligarh/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><Linkedin size={14} /></a>
+            <a href="https://www.instagram.com/globalengineersaligarh/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><Instagram size={14} /></a>
+            <a href="https://in.pinterest.com/Globalengineersaligarh/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><PiPinterestLogo size={14} /></a>
+            <a href="https://www.youtube.com/@Globalengineersaligarh" target="_blank" rel="noopener noreferrer" className="hover:text-accent-yellow transition-colors"><Youtube size={14} /></a>
           </div>
         </div>
       </div>
