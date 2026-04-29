@@ -12,6 +12,7 @@ import Team from '../components/Team';
 import Reviews from '../components/Reviews';
 import Clients from '../components/Clients';
 import Contact from '../components/Contact';
+import Map from '../components/Map';
 import PageTransition from '../components/PageTransition';
 
 export default function HomePage() {
@@ -31,6 +32,7 @@ export default function HomePage() {
       <Reviews />
       <Clients />
       <Contact />
+      <Map />
     </PageTransition>
   );
 }

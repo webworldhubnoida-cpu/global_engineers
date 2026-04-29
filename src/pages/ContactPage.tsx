@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Send, Award, Clock, ShieldCheck } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
+import Map from '../components/Map';
 
 export default function ContactPage() {
   return (
@@ -168,18 +169,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="h-[500px] w-full bg-gray-100">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.123456789012!2d78.12345678901234!3d27.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA3JzM0LjQiTiA3OMKwMDcnMzQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Global Engineers Location"
-        />
-      </section>
+      <Map />
     </PageTransition>
   );
 }
