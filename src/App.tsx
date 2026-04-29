@@ -17,7 +17,6 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const TestingPage = lazy(() => import('./pages/TestingPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
-const TeamPage = lazy(() => import('./pages/TeamPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CertificatesPage = lazy(() => import('./pages/CertificatesPage'));
 
@@ -40,7 +39,6 @@ function AnimatedRoutes() {
             <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
             <Route path="/testing" element={<PageTransition><TestingPage /></PageTransition>} />
             <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
-            <Route path="/team" element={<PageTransition><TeamPage /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
             <Route path="/certificates" element={<PageTransition><CertificatesPage /></PageTransition>} />
           </Routes>
