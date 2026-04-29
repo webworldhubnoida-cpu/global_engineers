@@ -15,6 +15,22 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react')) return 'vendor-react';
+              if (id.includes('framer-motion') || id.includes('motion')) return 'vendor-motion';
+              if (id.includes('lucide-react') || id.includes('react-icons')) return 'vendor-icons';
+              if (id.includes('swiper')) return 'vendor-swiper';
+              return 'vendor';
+            }
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000,
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

@@ -118,17 +118,7 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* Experience Badge Overlay */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-accent text-white p-8 rounded-[2rem] shadow-2xl z-20 hidden md:block"
-            >
-              <p className="text-5xl font-black mb-1">2020</p>
-              <p className="text-xs uppercase font-bold tracking-[0.2em] opacity-80">Year Established</p>
-            </motion.div>
+            {/* Experience Badge Overlay - Removed as per user request */}
           </div>
 
         </div>

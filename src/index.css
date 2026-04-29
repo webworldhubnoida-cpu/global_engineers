@@ -29,3 +29,120 @@
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
 }
+
+/* Google Translate Image-based Styling */
+.google-translate-container {
+  @apply rounded-xl p-5 transition-all;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 260px;
+}
+
+#google_translate_element {
+  height: auto !important;
+}
+
+/* Ensure no duplicate widgets or boxes show up */
+.skiptranslate.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Hide the second box if Google injects multiple structures */
+#google_translate_element .skiptranslate:not(:first-child) {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  font-family: inherit !important;
+  color: #6b7280 !important; /* "Powered by" text color */
+  font-size: 11px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+/* Hide any extra boxes or indicators Google might add */
+.goog-te-gadget img,
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Style the text "Powered by" */
+.goog-te-gadget > span {
+  display: block !important;
+  color: #6b7280 !important;
+  margin-bottom: 2px !important;
+  order: 2; /* Position after the dropdown */
+}
+
+/* Hide the default "Select Language" text node if it exists outside combo */
+.goog-te-gadget > span > a {
+  display: none !important;
+}
+
+/* Style the Dropdown (Select Language) */
+.goog-te-gadget .goog-te-combo {
+  background: transparent !important;
+  border: none !important;
+  color: #a48b64 !important; /* Tan Gold from image */
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  padding: 0 24px 0 0 !important;
+  margin: 0 0 10px 0 !important;
+  cursor: pointer;
+  outline: none !important;
+  width: 100% !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a48b64' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: 16px !important;
+  order: 1; /* Dropdown at the top */
+}
+
+/* Powered by Google Section */
+.goog-logo-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-decoration: none !important;
+  margin-top: 2px !important;
+  order: 3; /* Position after "Powered by" text */
+}
+
+.goog-logo-link img {
+  height: 14px !important;
+  width: auto !important;
+  margin: 4px 0 !important;
+  filter: brightness(0.9) grayscale(0.2);
+}
+
+/* "Translate" text styling */
+.goog-te-gadget .goog-logo-link::after {
+  content: "Translate";
+  display: block !important;
+  color: #a48b64 !important; /* Tan Gold color */
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  margin-top: 4px !important;
+}
+
+/* Hide original "Translate" text if it's a separate node */
+.goog-logo-link span {
+  display: none !important;
+}
+
+/* Hide unwanted elements */
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-te-gadget br {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
